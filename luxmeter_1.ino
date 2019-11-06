@@ -59,7 +59,7 @@ delay(10);
  /*ldrvoltage = 5.0 - rvoltage; */
 float lux_read = (( read1 + read2 + read3 + read4 + read5 + read6 + read7 + read8 + read9 + read10)/10.00);
 float temp_read = (( read1_1 + read2_1 + read3_1 + read4_1 + read5_1 + read6_1 + read7_1 + read8_1 + read9_1 + read10_1)/10.00);
-lux_print = lux_read*10.0;
+lux_print = lux_read*11.0;
 float cel = temp_read * 0.4887855;
  lcd.setCursor(0,0);
  lcd.print(lux_print);
