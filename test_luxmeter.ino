@@ -39,7 +39,7 @@ void loop() {
  delay(10);
 
 lux_avg1 = ((read1+read2+read3+read4+read5+read6+read7+read8+read9+read10)/10);
-lux_avg = lux_avg1*10;
+lux_avg = lux_avg1*11;
 //Serial.println(lux_avg);
 if(lux_avg>=0 && lux_avg<=50){
   digitalWrite(2,HIGH);
