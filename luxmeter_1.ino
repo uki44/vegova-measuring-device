@@ -16,8 +16,6 @@ void setup() {
 }
 
 void loop() {
-// temp_read = analogRead(lm35_pin);
- //lux_read = analogRead(pres_pin);
  pot_read = analogRead(pot_pin);
 
  analogWrite(3,pot_read/4);
@@ -53,10 +51,7 @@ delay(10);
 read10 = analogRead(A0);
 read10_1 = analogRead(A1);
 delay(10);
-/* float mv = (temp_read/1024.0)*5000;
- float cel = mv/10;
- */
- /*ldrvoltage = 5.0 - rvoltage; */
+
 float lux_read = (( read1 + read2 + read3 + read4 + read5 + read6 + read7 + read8 + read9 + read10)/10.00);
 float temp_read = (( read1_1 + read2_1 + read3_1 + read4_1 + read5_1 + read6_1 + read7_1 + read8_1 + read9_1 + read10_1)/10.00);
 lux_print = lux_read*11.0;
@@ -73,6 +68,5 @@ float cel = temp_read * 0.4887855;
  lcd.setCursor(10,1);
  lcd.print("C");
  delay(200); 
- //lcd.clear();
 
 }
